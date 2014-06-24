@@ -35,6 +35,13 @@ config = (grunt) ->
         dest: 'www/img/'
       ]
 
+  handlebars:
+    compile:
+      options:
+        amd: true
+      src: ['assets/javascripts/app/templates/**/*.html'],
+      dest: 'assets/javascripts/app/templates/.compiled/tmpl.js'
+
   coffee:
     dist:
       options:
@@ -85,6 +92,9 @@ config = (grunt) ->
     nerds: ['www/js/spec/index.html']
 
   watch:
+    handlebars:
+      files: 'assets/javascripts/app/templates/**/*.html'
+      tasks: ['handlebars:compile']
     coffee:
       files: ['assets/javascripts/**']
       tasks: ['coffee']
@@ -114,6 +124,7 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks('grunt-contrib-connect')
   grunt.loadNpmTasks('grunt-mocha-phantomjs')
   grunt.loadNpmTasks('grunt-html-build')
+  grunt.loadNpmTasks('grunt-contrib-handlebars')
 
   grunt.registerTask('default', ['build'])
 

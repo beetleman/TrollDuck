@@ -12,6 +12,8 @@ plugins/
 Databases.db
 instrumentscli*
 
+.compiled
+
 .settings
 .project
 .DS_Store
