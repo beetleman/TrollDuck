@@ -41,13 +41,19 @@ config = (grunt) ->
         src: ['**/*']
         dest: 'www/img/'
       ]
-
+    compiled:
+      files: [
+        expand: true
+        cwd: 'assets/javascripts/app/.compiled/'
+        src: ['**/*']
+        dest: 'www/js/app/.compiled/'
+      ]
   handlebars:
     compile:
       options:
         amd: true
       src: ['assets/javascripts/app/templates/**/*.html'],
-      dest: 'assets/javascripts/app/templates/.compiled/tmpl.js'
+      dest: 'assets/javascripts/app/.compiled/tmpl.js'
 
   coffee:
     dist:
@@ -102,6 +108,9 @@ config = (grunt) ->
     handlebars:
       files: 'assets/javascripts/app/templates/**/*.html'
       tasks: ['handlebars:compile']
+    compiled:
+      files: 'assets/javascripts/app/templates/**/*.html'
+      tasks: ['copy:compiled']
     coffee:
       files: ['assets/javascripts/**']
       tasks: ['coffee']

@@ -5,11 +5,10 @@ define (require, exports, module) ->
   class WidgetRouter extends Backbone.Router
 
     routes:
-      "": "widgets" # This is a default route.
+      "": "trollduck" # This is a default route.
 
     initialize: (options) ->
       @app = options.app
 
-    widgets: ->
-      @app.widgetView.render()
-
+    trollduck: ->
+      @app.trollDuckView.render()

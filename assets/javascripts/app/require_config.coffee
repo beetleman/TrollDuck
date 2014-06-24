@@ -8,9 +8,11 @@ require.config
     'backbone-hammer' : '../../../components/backbone.hammer/backbone.hammer'
     'underscore'      : '../../../components/lodash/dist/lodash'
     'jquery'          : '../../../components/jquery/dist/jquery'
-    'handlebars': '../../../components/handlebars/handlebars.amd'
-    'tmpl': 'templates/.compiled/tmpl'
+    'handlebars': '../../../components/handlebars/handlebars'
+    'tmpl': './.compiled/tmpl'
   shim:
     backbone:
       deps    : ['jquery', 'underscore']
       exports : 'Backbone'
+    handlebars:
+      exports: 'Handlebars'

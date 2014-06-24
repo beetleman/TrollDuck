@@ -8,9 +8,8 @@ define (require, exports, module) ->
   _            = require('underscore')
   $            = require('jquery')
   Backbone     = require('backbone')
-  WidgetRouter = require('routers/widget_router')
-  Widgets      = require('collections/widgets')
-  WidgetView   = require('views/widget_view')
+  TrollDuckRouter = require('routers/trollduck_router')
+  TrollDuckView   = require('views/trollduck_view')
 
   ###
     We'll use this file to boot up our application. It's extending Backbone.View, but
@@ -21,19 +20,15 @@ define (require, exports, module) ->
     # is up to you, as it's not something Backbone really prescribes.
   ###
 
-  class WidgetApp extends Backbone.View
+  class TrollDuckApp extends Backbone.View
 
     initialize: ->
       # Create our routers
-      @router = new WidgetRouter
+      @router = new TrollDuckRouter
         app: @
 
-      # Create our collections
-      @widgets = new Widgets
-
       # Create our views
-      @widgetView = new WidgetView
-        collection: @widgets
+      @trollDuckView = new TrollDuckView
 
       # Start backbone history
       Backbone.history.start()
