@@ -17,4 +17,4 @@ define (require, exports, module) ->
       @$el.html @tmpl({})
 
     addDuck: ->
-      conslole.log('Kfaaaa')
+      console.log('Kfaaaa')
