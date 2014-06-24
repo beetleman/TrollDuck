@@ -131,6 +131,7 @@ module.exports = (grunt) ->
   grunt.registerTask('build', [
     'copy'
     'coffee'
+    'handlebars'
     'requirejs'
     'less'
     'cssmin'
