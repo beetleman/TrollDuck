@@ -1,10 +1,10 @@
-<widget id="com.WidgetCorp.WidgetApp" version="0.0.1" xmlns="http://www.w3.org/ns/widgets">
-  <name>WidgetApp</name>
+<widget id="com.Beetleman.TrollDuck" version="0.0.1" xmlns="http://www.w3.org/ns/widgets">
+  <name>TrollDuck</name>
   <description>
     An sample Apache Cordova + Backbone application.
   </description>
-  <author email="mike@mcarter.me" href="http://mcarter.me">
-    WidgetCorp team
+  <author email="mateusz.probachta@gmail.com" href="https://github.com/beetleman">
+    Mateusz Probachta
   </author>
   <content src="cordova.html" />
   <access origin="*" />

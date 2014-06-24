@@ -27,6 +27,13 @@ config = (grunt) ->
       src: ["!www/config.xml", "!www/js/spec/index.html", "!www/js/spec/lib/*.js", "www/*"]
 
   copy:
+    fonts:
+      files: [
+        expand: true
+        cwd: 'assets/fonts/'
+        src: ['**/*']
+        dest: 'www/fonts/'
+      ]
     img:
       files: [
         expand: true
@@ -106,6 +113,9 @@ config = (grunt) ->
     img:
       files: ['assets/img/**/*']
       tasks: ['copy:img']
+    fonts:
+      files: ['assets/fonts/**/*']
+      tasks: ['copy:fonts']
     htmlbuild:
       files: ['assets/public/**/*.html']
       tasks: ['htmlbuild']
